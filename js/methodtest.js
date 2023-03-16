@@ -1,13 +1,10 @@
-window.addEventListener('DOMContentLoaded',init);
+    document.getElementById('postbt').addEventListener('click', postSend);
+    document.getElementById('putbt').addEventListener('click', putSend);
+    document.getElementById('getbt').addEventListener('click', getSend);
+    document.getElementById('delbt').addEventListener('click', delSend);
+    const date = document.getElementById('date');
+    date.value = new Date();
 
-        function init(){
-            document.getElementById('postbt').addEventListener('click', postSend);
-            document.getElementById('putbt').addEventListener('click', putSend);
-            document.getElementById('getbt').addEventListener('click', getSend);
-            document.getElementById('delbt').addEventListener('click', delSend);
-            const date1 = document.getElementById('date');
-            date1.value = new Date();
-        }
 
         async function postSend(){
             let form = document.getElementById('myform');
