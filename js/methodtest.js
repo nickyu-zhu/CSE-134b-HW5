@@ -13,11 +13,11 @@ window.addEventListener('DOMContentLoaded',init);
             let form = document.getElementById('myform');
             let method = "post";
             let endpoint = "https://httpbin.org/post";
-            let payload = new FormData(form);
+            let data = new FormData(form);
 
             let request = await fetch(endpoint, {
             method : method,
-            body : payload
+            body : data
         });
 
         let jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
@@ -28,11 +28,11 @@ window.addEventListener('DOMContentLoaded',init);
             let form = document.getElementById('myform');
             let method = "put";
             let endpoint = "https://httpbin.org/put";
-            let payload = new FormData(form);
+            let data = new FormData(form);
 
             let request = await fetch(endpoint, {
             method : method,
-            body : payload
+            body : data
         });
 
         let jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
@@ -59,11 +59,11 @@ window.addEventListener('DOMContentLoaded',init);
             let form = document.getElementById('myform');
             let method = "delete";
             let endpoint = "https://httpbin.org/delete";
-            let payload = null;
+            let data = null;
 
             let request = await fetch(endpoint, {
             method : method,
-            body : payload
+            body : data
         });
         let jsonPretty = JSON.stringify(JSON.parse(await request.text()),null,2);
         document.getElementById('response').innerHTML = jsonPretty;
